@@ -2,7 +2,7 @@ const sun = document.getElementById('sun')
 const pig = document.getElementById('pig')
 const question = document.querySelector('.question')
 
-const moveAll = (el, factorX = 0, factorY = 0) => {
+const move = (el, factorX = 0, factorY = 0) => {
   const { scrollY } = window
 
   el.style.transform = `translateX(${scrollY *
@@ -15,4 +15,4 @@ function moveAll () {
   move(question, 0, 0.9)
 }
 
-window.addEventListener('scroll', move)
+window.addEventListener('scroll', moveAll)
