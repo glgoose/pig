@@ -1,4 +1,5 @@
 @use 'variables' as *
+@use 'utils' as *
 
 %transition
   content: ''
@@ -25,17 +26,17 @@
     left: 0
 
   #sun
-    height: 300px
-    width: 300px
-    top: 20px
-    right: 20px
+    height: 22vh
+    width: auto
+    top: 1vh
+    right: 0.8vw
 
   #field
     z-index: 2
 
   #pig
     position: absolute
-    max-height: 150px
+    max-height: 12vh
     width: auto
     height: auto
     top: 70vh
@@ -44,26 +45,19 @@
 
   .question
     position: relative
-    font:
-      family: menlo
-      weight: semibold
+    font-family: menlo
+
+    @include p-x(2em)
+
     margin-top: 35vh
     color: $gray-50
-    font-size: 2.8rem
     z-index: 1
 
-  // &::before
-  //   @extend %transition
-  //   bottom: 0
-  //   width: 100%
-  //   height: 100px
-  //   background: linear-gradient(to top, $gray-50, transparent)
+    @media (min-width: $sm)
+      font-size: 1.5rem
 
-  // &::after
-  //   @extend %transition
-  //   top: 0
-  //   left: 0
-  //   width: 100%
-  //   height: 100%
-  //   background: $gray-50
-  //   mix-blend-mode: color
+    @media (min-width: $md)
+      font-size: 2.1rem
+
+    @media (min-width: $lg)
+      font-size: 2.8rem
