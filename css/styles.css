@@ -5,7 +5,7 @@
 
 body {
   background: #F9FAFB;
-  min-height: 3000px;
+  min-height: 2500px;
 }
 
 .main {
@@ -15,7 +15,7 @@ body {
   width: 100%;
 }
 .main h2 {
-  margin-top: 900px;
+  margin-top: 400px;
   font-size: 8rem;
   color: pink;
 }
@@ -60,9 +60,10 @@ body {
 .hero .question {
   position: relative;
   font-family: menlo;
+  font-weight: semibold;
   margin-top: 35%;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   z-index: 1;
 }
 
