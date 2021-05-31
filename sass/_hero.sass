@@ -1,0 +1,67 @@
+@use 'variables' as *
+
+// %transition
+//   content: ''
+//   position: absolute
+//   z-index: 10000
+
+.hero
+  position: relative
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  display: flex
+  justify-content: center
+
+  img
+    position: absolute
+    width: 100%
+    height: 100%
+    object-fit: cover
+    pointer-events: none
+
+  #field, #sky
+    top: 0
+    left: 0
+
+  #sun
+    height: 300px
+    width: 300px
+    top: 20px
+    right: 20px
+
+  #field
+    z-index: 2
+
+  #pig
+    position: absolute
+    max-height: 150px
+    width: auto
+    height: auto
+    top: 910px
+    left: 300px
+    z-index: 3
+
+  // &::before
+  //   @extend %transition
+  //   bottom: 0
+  //   width: 100%
+  //   height: 100px
+  //   background: linear-gradient(to top, $gray-50, transparent)
+
+  // &::after
+  //   @extend %transition
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   height: 100%
+  //   background: $gray-50
+  //   mix-blend-mode: color
+
+  .question
+    position: relative
+    font-family: menlo
+    margin-top: 35%
+    color: #fff
+    font-size: 2.5rem
+    z-index: 1
