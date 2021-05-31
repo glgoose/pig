@@ -4,21 +4,16 @@ const pig = document.getElementById('pig')
 const field = document.getElementById('field')
 const question = document.querySelector('.question')
 
+const transform = (el, scrollY, factorX = 0, factorY = 0) =>
+  (el.style.transform = `translateX(${scrollY *
+    factorX}px) translateY(${scrollY * factorY}px)`)
+
 function move () {
-  const value = window.scrollY
+  const { scrollY, innerHeight: windowHeight } = window
 
-  sky.style.top = -value * 0.5 + 'px'
-
-  sun.style.right = value * 0.1 + 'px'
-  sun.style.top = value * 0.5 + 'px'
-
-  field.style.top = -value * 0.5 + 'px'
-
-  if (question.style.top <= window.innerHeight)
-    question.style.top = value + 'px'
-
-  pig.style.left = 300 + value * 0.7 + 'px'
-  pig.style.top = 910 + -value * 0.3 + 'px'
+  transform(sun, scrollY, -0.2, 0.5)
+  transform(pig, scrollY, 0.7, 0.3)
+  transform(question, scrollY, 0, 0.9)
 }
 
 window.addEventListener('scroll', move)
