@@ -12,7 +12,7 @@ function move () {
   const { scrollY, innerHeight: windowHeight } = window
 
   transform(sun, scrollY, -0.2, 0.5)
-  transform(pig, scrollY, 0.7, 0.3)
+  transform(pig, scrollY, 0.7, 0.2)
   transform(question, scrollY, 0, 0.9)
 }
 

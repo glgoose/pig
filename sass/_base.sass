@@ -1,4 +1,5 @@
 @use 'variables' as *
+@use 'utils' as *
 
 *
   margin: 0
@@ -13,13 +14,15 @@ body
   align-items: center
   justify-content: center
   height: 100vh
-  // width: 100%
-  // height: 100%
 
   h2
-    // margin-top: calc(150vh - 4rem)
-    // margin-top: auto
-    // margin-bottom: auto
-    font-size: 8rem
     color: pink
-    height: 100%
+
+    font-size: 4rem
+
+    @media (min-width: $sm)
+      font-size: 6rem
+    @media (min-width: $md)
+      font-size: 7rem
+    @media (min-width: $lg)
+      font-size: 8rem
